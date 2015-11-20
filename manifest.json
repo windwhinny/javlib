@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "javlib",
+  "description": "chrome extension for javlib",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": [
+          "http://javlib2.com/*",
+          "http://javlib3.com/*",
+          "http://www.javlibrary.com/*"
+      ],
+      "js": ["injector.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "http://javlib3.com/*"
+  ]
+}
